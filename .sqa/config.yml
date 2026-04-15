@@ -15,56 +15,56 @@ sqa_criteria:
     repos:
       github.com/demichie/MrLavaLoba2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-buff-axolotl.sh
-        container: qc.acc_silly-tangerine-civet
+        - /usr/bin/env sh .sqa/script.paltry-amber-dugong.sh
+        container: qc.acc_wheezy-violet-skunk
   QC.Doc:
     repos:
       github.com/demichie/MrLavaLoba2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-tangerine-chipmunk.sh
-        container: qc.doc_gamy-wheat-fly
+        - /usr/bin/env sh .sqa/script.squirrely-lemon-olm.sh
+        container: qc.doc_flabby-asparagus-bullfrog
       github.com/demichie/MrLavaLoba2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-lemon-peccary.sh
-        container: qc.doc_breezy-russet-chihuahua
+        - /usr/bin/env sh .sqa/script.pasty-emerald-hippopotamus.sh
+        container: qc.doc_skimpy-chartreuse-squirt
       github.com/demichie/MrLavaLoba2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-viridian-dolphin.sh
-        container: qc.doc_lousy-magnolia-slug
+        - /usr/bin/env sh .sqa/script.lanky-magnolia-retriever.sh
+        container: qc.doc_crabby-zucchini-armadillo
   QC.Lic:
     repos:
       github.com/demichie/MrLavaLoba2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-plum-macaque.sh
-        container: qc.lic_gamy-peach-lionfish
+        - /usr/bin/env sh .sqa/script.wimpy-gold-opossum.sh
+        container: qc.lic_freaky-jade-rabbit
   QC.Met:
     repos:
       github.com/demichie/MrLavaLoba2 cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-amethyst-havanese.sh
-        container: qc.met_sunny-champagne-beagle
+        - /usr/bin/env sh .sqa/script.snazzy-ivory-mau.sh
+        container: qc.met_nippy-ruby-yak
   QC.Sec:
     repos:
       github.com/demichie/MrLavaLoba2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-amaranth-chimpanzee.sh
-        container: qc.sec_pretty-saffron-stingray
+        - /usr/bin/env sh .sqa/script.bluesy-aquamarine-fish.sh
+        container: qc.sec_fuzzy-auburn-mouse
   QC.Sty:
     repos:
       github.com/demichie/MrLavaLoba2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-asparagus-raccoon.sh
-        container: qc.sty_snoopy-silver-gorilla
+        - /usr/bin/env sh .sqa/script.sleazy-violet-armadillo.sh
+        container: qc.sty_fuzzy-ecru-dugong
   QC.Uni:
     repos:
       github.com/demichie/MrLavaLoba2 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-champagne-nightingale.sh
-        container: qc.uni_lovely-fuchsia-frog
+        - /usr/bin/env sh .sqa/script.lumpy-chestnut-magpie.sh
+        container: qc.uni_wiggy-jade-penguin
   QC.Ver:
     repos:
       github.com/demichie/MrLavaLoba2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-cobalt-opossum.sh
-        container: qc.ver_messy-ultramarine-affenpinscher
+        - /usr/bin/env sh .sqa/script.hilly-apricot-husky.sh
+        container: qc.ver_stinky-cerise-beaver
 timeout: 5400
