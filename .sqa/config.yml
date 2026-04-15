@@ -1,0 +1,70 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint_fix
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/demichie/MrLavaLoba2:
+      branch: main
+      repo: https://github.com/demichie/MrLavaLoba2
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/demichie/MrLavaLoba2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-sangria-gar.sh
+        container: qc.acc_wimpy-denim-ladybird
+  QC.Doc:
+    repos:
+      github.com/demichie/MrLavaLoba2 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-red-angelfish.sh
+        container: qc.doc_skinny-magnolia-rottweiler
+      github.com/demichie/MrLavaLoba2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-green-mule.sh
+        container: qc.doc_wimpy-aquamarine-quetzal
+      github.com/demichie/MrLavaLoba2 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-aquamarine-vulture.sh
+        container: qc.doc_blurry-viridian-millipede
+  QC.Lic:
+    repos:
+      github.com/demichie/MrLavaLoba2 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-lime-maltese.sh
+        container: qc.lic_cranky-magenta-shark
+  QC.Met:
+    repos:
+      github.com/demichie/MrLavaLoba2 cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-chocolate-zorse.sh
+        container: qc.met_fuzzy-red-jaguar
+  QC.Sec:
+    repos:
+      github.com/demichie/MrLavaLoba2 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-aqua-robin.sh
+        container: qc.sec_gloppy-platinum-snail
+  QC.Sty:
+    repos:
+      github.com/demichie/MrLavaLoba2 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-magenta-lynx.sh
+        container: qc.sty_wiggy-bistre-gar
+  QC.Uni:
+    repos:
+      github.com/demichie/MrLavaLoba2 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-burgundy-jellyfish.sh
+        container: qc.uni_smelly-firebrick-quoll
+  QC.Ver:
+    repos:
+      github.com/demichie/MrLavaLoba2 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-sangria-hyrax.sh
+        container: qc.ver_hazy-cardinal-tiger
+timeout: 5400
